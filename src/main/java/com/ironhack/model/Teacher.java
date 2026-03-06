@@ -3,13 +3,11 @@ package com.ironhack.model;
 import java.util.UUID;
 
 public class Teacher {
-
     private final String id;
     private String name;
-    private double salary;
+    private Double salary;
 
-
-    public Teacher(String name, double salary) {
+    public Teacher(String name, Double salary) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.salary = salary;
@@ -27,11 +25,11 @@ public class Teacher {
         this.name = name;
     }
 
-    public double getSalary() {
+    public Double getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Double salary) {
         this.salary = salary;
     }
 }
