@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{base_url}}/v1/students?courseId=4554a2c8-033b-4929-a430-e8d79c938e28"
+method: GET
+queryParams:
+  courseId: 4554a2c8-033b-4929-a430-e8d79c938e28
+order: 1000

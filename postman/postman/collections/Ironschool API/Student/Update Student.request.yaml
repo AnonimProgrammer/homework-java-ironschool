@@ -1,0 +1,13 @@
+$kind: http-request
+url: "{{base_url}}/v1/students/d0e4c3d6-c9b5-467b-93c4-35c391776c5f"
+method: PATCH
+body:
+  type: json
+  content: |-
+    {
+        "name": "Omar Ismayilov",
+        "address": "Some Address",
+        "email": "omar.ismayilov@icloud.com",
+        "courseId": "4554a2c8-033b-4929-a430-e8d79c938e28"
+    }
+order: 2000

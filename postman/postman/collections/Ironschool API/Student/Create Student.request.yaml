@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/v1/students"
+method: POST
+headers:
+  API-Key: "123456"
+body:
+  type: json
+  content: |-
+    {
+        "name": "Omar Ismayilov",
+        "address": "Some Address",
+        "email": "omar.ismayilov@icloud.com"
+    }
+order: 4000

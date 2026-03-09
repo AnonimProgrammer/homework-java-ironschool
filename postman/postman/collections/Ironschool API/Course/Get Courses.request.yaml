@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{base_url}}/v1/courses?name=Java"
+method: GET
+queryParams:
+  name: Java
+order: 2000

@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{base_url}}/v1/courses/9efba7f1-95eb-433e-ae62-8329d2c5823a"
+method: DELETE
+order: 4000

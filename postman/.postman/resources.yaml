@@ -1,0 +1,12 @@
+# Use this workspace to collaborate
+workspace:
+  id: 5b3608d3-19b4-45a6-942a-8c81dd0bb1f9
+
+localResources:
+  collections:
+    - ../Ironschool API.postman_collection.json
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+cloudResources:
+  collections:
+    ../postman/collections/Ironschool API: 44239540-c2b20101-56d0-4923-b20e-6f278a6799c2
