@@ -1,0 +1,4 @@
+$kind: http-request
+url: "{{base_url}}/v1/students/6ae07836-1e85-4254-98fa-ad613c16552c"
+method: DELETE
+order: 3000

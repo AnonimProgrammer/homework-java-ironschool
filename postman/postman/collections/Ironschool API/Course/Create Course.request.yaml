@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/v1/courses"
+method: POST
+headers:
+  API-Key: "123456"
+body:
+  type: json
+  content: |-
+    {
+        "name": "Java",
+        "price": 250.0,
+        "moneyEarned": 40000.0
+    }
+order: 5000

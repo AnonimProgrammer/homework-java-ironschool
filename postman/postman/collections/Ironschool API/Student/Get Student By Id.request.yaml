@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/v1/students/d0e4c3d6-c9b5-467b-93c4-35c391776c5f"
+method: GET
+headers:
+  API-Key: "123456"
+body:
+  type: text
+  content: |-
+    {
+        "name": "Advanced Java",
+        "price": 320.0,
+        "moneyEarned": 20000.0
+    }
+order: 5000
