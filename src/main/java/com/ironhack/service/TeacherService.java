@@ -48,8 +48,15 @@ public class TeacherService {
 
     public TeacherResponse update(String id, UpdateTeacherRequest request) {
         Teacher existing = findOrThrow(id);
-        if (request.name() != null) existing.setName(request.name());
-        if (request.salary() != null) existing.setSalary(request.salary());
+        if (request.name() != null) {
+            existing.setName(request.name());
+        }
+
+
+        if (request.salary() != null) {
+            existing.setSalary(request.salary());
+        }
+
         return mapper.toResponse(existing);
     }
 
