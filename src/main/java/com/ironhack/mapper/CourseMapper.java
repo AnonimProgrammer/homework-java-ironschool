@@ -1,7 +1,7 @@
 package com.ironhack.mapper;
 
-import com.ironhack.dto.CreateCourseRequest;
-import com.ironhack.dto.CourseResponse;
+import com.ironhack.dto.request.CreateCourseRequest;
+import com.ironhack.dto.response.CourseResponse;
 import com.ironhack.model.Course;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;

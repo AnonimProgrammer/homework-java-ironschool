@@ -1,8 +1,8 @@
 package com.ironhack.controller;
 
-import com.ironhack.dto.CreateCourseRequest;
-import com.ironhack.dto.CourseResponse;
-import com.ironhack.dto.UpdateCourseRequest;
+import com.ironhack.dto.request.CreateCourseRequest;
+import com.ironhack.dto.response.CourseResponse;
+import com.ironhack.dto.request.UpdateCourseRequest;
 import com.ironhack.service.CourseService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;

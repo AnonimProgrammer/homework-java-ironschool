@@ -1,4 +1,4 @@
-package com.ironhack.dto;
+package com.ironhack.dto.response;
 
 import java.time.LocalDateTime;
 

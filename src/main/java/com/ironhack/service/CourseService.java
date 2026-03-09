@@ -1,11 +1,12 @@
 package com.ironhack.service;
 
-import com.ironhack.dto.CreateCourseRequest;
-import com.ironhack.dto.CourseResponse;
-import com.ironhack.dto.UpdateCourseRequest;
+import com.ironhack.dto.request.CreateCourseRequest;
+import com.ironhack.dto.response.CourseResponse;
+import com.ironhack.dto.request.UpdateCourseRequest;
 import com.ironhack.exception.NotFoundException;
 import com.ironhack.mapper.CourseMapper;
 import com.ironhack.model.Course;
+import com.ironhack.model.Teacher;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
@@ -16,19 +17,20 @@ import java.util.Map;
 public class CourseService {
     private final Map<String, Course> courses = new HashMap<>();
 
+    private final TeacherService teacherService;
     private final CourseMapper mapper;
 
-    public CourseService(CourseMapper mapper) {
+    public CourseService(TeacherService teacherService, CourseMapper mapper) {
+        this.teacherService = teacherService;
         this.mapper = mapper;
     }
 
     public CourseResponse create(CreateCourseRequest request) {
-        if (request.teacherId() != null) {
-            // Fetch teacher using teacher service
-            // Check if teacher exists, if not throw NotFoundException
-        }
         Course course = mapper.toModel(request);
-        // Set the teacher
+        if (request.teacherId() != null) {
+            Teacher teacher = teacherService.getModelById(request.teacherId());
+            course.setTeacher(teacher);
+        }
 
         courses.put(course.getId(), course);
         return mapper.toResponse(course);
@@ -67,9 +69,8 @@ public class CourseService {
         }
 
         if (request.teacherId() != null) {
-            // Fetch teacher using teacher service
-            // Check if teacher exists, if not throw NotFoundException
-            // Set the teacher
+            Teacher teacher = teacherService.getModelById(request.teacherId());
+            existingCourse.setTeacher(teacher);
         }
 
         return mapper.toResponse(existingCourse);
