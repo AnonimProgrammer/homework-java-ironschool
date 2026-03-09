@@ -21,34 +21,44 @@ public class TeacherController {
     }
 
     @PostMapping
-    public ResponseEntity<TeacherResponse> createTeacher(@Valid @RequestBody CreateTeacherRequest createTeacherRequest) {
-        TeacherResponse createdTeacher = teacherService.create(createTeacherRequest);
+    public ResponseEntity<TeacherResponse> createTeacher(
+            @Valid @RequestBody CreateTeacherRequest request
+    ) {
+        TeacherResponse createdTeacher = teacherService.create(request);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdTeacher);
     }
 
     @GetMapping
-    public ResponseEntity<List<TeacherResponse>> getTeachers(@RequestParam(required = false) String name,
-                                                             @RequestParam(required = false) Double minSalary,
-                                                             @RequestParam(required = false) Double maxSalary) {
+    public ResponseEntity<List<TeacherResponse>> getTeachers(
+            @RequestParam(required = false) String name,
+            @RequestParam(required = false) Double minSalary,
+            @RequestParam(required = false) Double maxSalary
+    ) {
         List<TeacherResponse> teachers = teacherService.getTeachers(name, minSalary, maxSalary);
         return ResponseEntity.ok(teachers);
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<TeacherResponse> getTeacherById(@PathVariable String id) {
+    public ResponseEntity<TeacherResponse> getTeacherById(
+            @PathVariable String id
+    ) {
         TeacherResponse teacher = teacherService.getById(id);
         return ResponseEntity.ok(teacher);
     }
 
     @PatchMapping("/{id}")
-    public ResponseEntity<TeacherResponse> updateTeacher(@PathVariable String id,
-                                                         @Valid @RequestBody UpdateTeacherRequest updateTeacherRequest) {
-        TeacherResponse updatedTeacher = teacherService.update(id, updateTeacherRequest);
+    public ResponseEntity<TeacherResponse> updateTeacher(
+            @PathVariable String id,
+            @Valid @RequestBody UpdateTeacherRequest request
+    ) {
+        TeacherResponse updatedTeacher = teacherService.update(id, request);
         return ResponseEntity.ok(updatedTeacher);
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> deleteTeacher(@PathVariable String id) {
+    public ResponseEntity<Void> deleteTeacher(
+            @PathVariable String id
+    ) {
         teacherService.delete(id);
         return ResponseEntity.noContent().build();
     }

@@ -24,6 +24,7 @@ public class TeacherService {
 
     public TeacherResponse create(CreateTeacherRequest request) {
         Teacher teacher = mapper.toModel(request);
+
         teachers.put(teacher.getId(), teacher);
         return mapper.toResponse(teacher);
     }
@@ -36,7 +37,9 @@ public class TeacherService {
         return findOrThrow(id);
     }
 
-    public List<TeacherResponse> getTeachers(String name, Double minSalary, Double maxSalary) {
+    public List<TeacherResponse> getTeachers(
+            String name, Double minSalary, Double maxSalary
+    ) {
         return teachers.values().stream()
                 .filter(t -> name == null || t.getName().equalsIgnoreCase(name))
                 .filter(t -> minSalary == null || t.getSalary() >= minSalary)

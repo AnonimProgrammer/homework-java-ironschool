@@ -8,7 +8,6 @@ import org.mapstruct.Mapping;
 
 @Mapper(componentModel = "spring")
 public interface CourseMapper {
-
     @Mapping(target = "teacher", ignore = true)
     Course toModel(CreateCourseRequest request);
 

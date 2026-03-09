@@ -40,6 +40,10 @@ public class CourseService {
         return mapper.toResponse(findOrThrow(id));
     }
 
+    public Course getModelById(String id) {
+        return findOrThrow(id);
+    }
+
     public List<CourseResponse> getCourses(
             String name, Double price, Double moneyEarned, String teacherId
     ) {
