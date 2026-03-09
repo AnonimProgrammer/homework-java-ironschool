@@ -1,4 +1,4 @@
-package com.ironhack.dto;
+package com.ironhack.dto.request;
 
 import jakarta.validation.constraints.Positive;
 import jakarta.validation.constraints.Size;

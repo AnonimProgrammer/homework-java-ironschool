@@ -1,6 +1,6 @@
 package com.ironhack.controller.advice;
 
-import com.ironhack.dto.ErrorResponse;
+import com.ironhack.dto.response.ErrorResponse;
 import com.ironhack.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -1,8 +1,8 @@
 package com.ironhack.service;
 
-import com.ironhack.dto.CreateTeacherRequest;
-import com.ironhack.dto.TeacherResponse;
-import com.ironhack.dto.UpdateTeacherRequest;
+import com.ironhack.dto.request.CreateTeacherRequest;
+import com.ironhack.dto.response.TeacherResponse;
+import com.ironhack.dto.request.UpdateTeacherRequest;
 import com.ironhack.exception.NotFoundException;
 import com.ironhack.mapper.TeacherMapper;
 import com.ironhack.model.Teacher;
@@ -32,7 +32,6 @@ public class TeacherService {
         return mapper.toResponse(findOrThrow(id));
     }
 
-    // Direct access to Teacher model for CourseService
     public Teacher getModelById(String id) {
         return findOrThrow(id);
     }
@@ -48,10 +47,10 @@ public class TeacherService {
 
     public TeacherResponse update(String id, UpdateTeacherRequest request) {
         Teacher existing = findOrThrow(id);
+
         if (request.name() != null) {
             existing.setName(request.name());
         }
-
 
         if (request.salary() != null) {
             existing.setSalary(request.salary());

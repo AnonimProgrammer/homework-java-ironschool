@@ -1,4 +1,4 @@
-package com.ironhack.dto;
+package com.ironhack.dto.response;
 
 public record TeacherResponse(
         String id,
