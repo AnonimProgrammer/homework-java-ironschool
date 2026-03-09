@@ -1,0 +1,16 @@
+package com.ironhack.mapper;
+
+import com.ironhack.dto.CreateCourseRequest;
+import com.ironhack.dto.CourseResponse;
+import com.ironhack.model.Course;
+import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
+
+@Mapper(componentModel = "spring")
+public interface CourseMapper {
+
+    @Mapping(target = "teacher", ignore = true)
+    Course toModel(CreateCourseRequest request);
+
+    CourseResponse toResponse(Course course);
+}
