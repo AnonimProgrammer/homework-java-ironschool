@@ -7,7 +7,6 @@ import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface TeacherMapper {
-
     Teacher toModel(CreateTeacherRequest request);
 
     TeacherResponse toResponse(Teacher teacher);

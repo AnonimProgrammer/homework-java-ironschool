@@ -4,12 +4,12 @@ import java.util.UUID;
 
 public class Student {
     private final String id;
-    private  String name;
+    private String name;
     private String address;
     private String email;
     private Course course;
 
-    public Student(String name, String address, String email){
+    public Student(String name, String address, String email) {
         this.id = UUID.randomUUID().toString();
         this.name = name;
         this.address = address;
