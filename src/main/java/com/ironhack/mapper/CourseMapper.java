@@ -6,7 +6,7 @@ import com.ironhack.model.Course;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring", uses = {TeacherMapper.class})
 public interface CourseMapper {
     @Mapping(target = "teacher", ignore = true)
     Course toModel(CreateCourseRequest request);
