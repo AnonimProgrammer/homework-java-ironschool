@@ -46,7 +46,7 @@ public class TeacherServiceImpl implements TeacherService {
             String name, Double minSalary, Double maxSalary
     ) {
         return teachers.values().stream()
-                .filter(t -> name == null || t.getName().equalsIgnoreCase(name))
+                .filter(t -> name == null || t.getName().contains(name))
                 .filter(t -> minSalary == null || t.getSalary() >= minSalary)
                 .filter(t -> maxSalary == null || t.getSalary() <= maxSalary)
                 .map(mapper::toResponse)
