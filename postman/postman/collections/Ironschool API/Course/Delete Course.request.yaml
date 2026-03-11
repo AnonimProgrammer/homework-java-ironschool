@@ -1,4 +1,5 @@
 $kind: http-request
-url: "{{base_url}}/v1/courses/9efba7f1-95eb-433e-ae62-8329d2c5823a"
+name: Delete Course
+url: "{{base_url}}/v1/courses/2c6a2e72-62c4-41cf-b0c7-96e8bfd0514f"
 method: DELETE
 order: 4000

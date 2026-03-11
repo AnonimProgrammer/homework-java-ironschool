@@ -1,0 +1,9 @@
+$kind: http-request
+name: Get Teachers
+url: "{{base_url}}/v1/teachers?name=ao&minSalary=100&maxSalary=2000"
+method: GET
+queryParams:
+  name: ao
+  minSalary: "100"
+  maxSalary: "2000"
+order: 3967199275723331

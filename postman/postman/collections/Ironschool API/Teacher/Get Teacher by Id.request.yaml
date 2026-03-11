@@ -1,0 +1,5 @@
+$kind: http-request
+name: Get Teacher by Id
+url: "{{base_url}}/v1/teachers/8891c56c-9322-4ee9-9a29-15ab540c8f3c"
+method: GET
+order: 681144553027927

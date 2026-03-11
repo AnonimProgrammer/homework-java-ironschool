@@ -1,0 +1,12 @@
+$kind: http-request
+name: Create Teacher
+url: "{{base_url}}/v1/teachers"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+        "name": "Joao",
+        "salary": 200
+    }
+order: 1773233469700

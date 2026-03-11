@@ -1,0 +1,11 @@
+$kind: http-request
+name: Update Teacher
+url: "{{base_url}}/v1/teachers/8891c56c-9322-4ee9-9a29-15ab540c8f3c"
+method: PATCH
+body:
+  type: json
+  content: |-
+    {
+        "salary": 1000.0
+    }
+order: 4087478647689202

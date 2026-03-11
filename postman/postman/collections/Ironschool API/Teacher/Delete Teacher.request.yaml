@@ -1,0 +1,5 @@
+$kind: http-request
+name: Delete Teacher
+url: "{{base_url}}/v1/teachers/8891c56c-9322-4ee9-9a29-15ab540c8f3c"
+method: DELETE
+order: 4092703674660316

@@ -1,5 +1,6 @@
 $kind: http-request
-url: "{{base_url}}/v1/courses/3a659b98-e13e-490d-8589-9921a18561e4"
+name: Get Course By Id
+url: "{{base_url}}/v1/courses/2c6a2e72-62c4-41cf-b0c7-96e8bfd0514f"
 method: GET
 headers:
   API-Key: "123456"
